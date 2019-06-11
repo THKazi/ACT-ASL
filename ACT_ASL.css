@@ -6,12 +6,12 @@
     font-size: 100%;
     vertical-align: baseline;
     background: transparent;
-    font-family: "Verdana",sans-serif;
+    font-family: "Verdana", sans-serif;
 }
 html {
     scroll-behavior: smooth;
 }
-.top{
+.top {
     background-color: #2196F3;
     /*padding: 15px 15px;*/
     position: sticky;
@@ -61,11 +61,11 @@ h1{
 .mainvid {
     text-align: center;
     width: 90%;
-    background-color:rgb(224, 224, 224);
+    background-color: rgb(224, 224, 224);
     clear: both;
     margin: auto;
-    display: block;   
-    padding: 20px; 
+    display: block;
+    padding: 20px;
 }
 .mainvid h {
     font-weight: bold;
@@ -91,10 +91,11 @@ h1{
 @media screen and (max-width: 900px) {
     .twit-col {
         width: 97%;
-    }}
+    }
+}
 
 /*CATALOGUE*/
-.row{
+.row {
     width: 100%;
     padding-right: 10px;
     padding-left: 10px;
@@ -110,10 +111,11 @@ h1{
 }
 /* Responsive layout - makes the three columns stack on top of each other instead of next to each other on smaller screens (600px wide or less) */
 @media screen and (max-width: 900px) {
-.collapse {
-    width: 97%;
-    text-align: center;
-}}
+    .collapse {
+        width: 97%;
+        text-align: center;
+    }
+}
 .collapse {
     background-color: #eee;
     color: rgb(32, 32, 32);
