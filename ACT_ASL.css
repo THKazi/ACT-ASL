@@ -1,15 +1,11 @@
-* { /* * = universal selector*/
-    margin: 0;
-    padding: 0;
-    border: 0;
-    outline: 0;
-    font-size: 100%;
-    vertical-align: baseline;
-    background: transparent;
-    font-family: "Verdana", sans-serif;
-}
 html {
     scroll-behavior: smooth;
+}
+body {
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+    font-family: "Verdana", sans-serif;
 }
 .top {
     background-color: #2196F3;
@@ -18,7 +14,8 @@ html {
     /* We want a little blue strip below the navbar */
     padding-bottom: 6px;
 }
-h1 {
+.top h1 {
+    margin: 0;
     background-color: #2196F3;
     float: center;
     text-align: center;
@@ -110,6 +107,8 @@ h1 {
 /* Responsive layout - lays boxes on top of one another for smaller screens */
 @media screen and (max-width: 900px) {
     .box {
+        /* When laid out in one column, side-margins are unnecessary */
+        margin: 5px 0;
         width: 97%;
     }
 }
@@ -117,7 +116,7 @@ h1 {
     background-color: #eee;
     color: rgb(32, 32, 32);
     cursor: pointer;
-    padding: 18px;
+    padding: 18px 0;
     width: 100%;
     border: none;
     text-align: center;
@@ -130,16 +129,15 @@ h1 {
     height: 70px;
 }
 .content {
-    padding: 10px 10px;
-    width: 95.5%;
+    width: 100%;
     display: none;
     overflow: visible;
     background-color: #f1f1f1;
     text-align: left;
 }
-video {
+
+.content video {
     width: 100%;
-    height: 100%;
 }
 /*Info*/
 .image {
