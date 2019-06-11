@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     border: 0;
-    outline: 0;
+    outline: 1px solid red;
     font-size: 100%;
     vertical-align: baseline;
     background: transparent;
@@ -96,25 +96,21 @@ h1 {
 }
 
 /*CATALOGUE*/
-.row {
-    width: 100%;
-    padding-right: 10px;
-    padding-left: 10px;
-    padding-top: 0px;
-    padding-bottom: 0px;
-    display: inline-block;
-    text-align:center;
+.cat {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
 }
+
 .column {
-    float: left;
     width: 32%;
-    padding: 7px 5px 0px 5px;
 }
 /* Responsive layout - makes the three columns stack on top of each other instead of next to each other on smaller screens (600px wide or less) */
 @media screen and (max-width: 900px) {
-    .collapse {
+    .column {
         width: 97%;
-        text-align: center;
     }
 }
 .collapse {
@@ -122,7 +118,6 @@ h1 {
     color: rgb(32, 32, 32);
     cursor: pointer;
     padding: 18px;
-    height: 30%;
     width: 100%;
     border: none;
     text-align: center;
