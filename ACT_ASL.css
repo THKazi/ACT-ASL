@@ -24,7 +24,7 @@ h1 {
     text-align: center;
     color: rgb(255, 233, 106);
     font-size: 80px;
-    padding: 10px 15px;
+    padding: 10px 0;
 }
 .navbar {
     overflow: hidden;
@@ -52,9 +52,9 @@ h1 {
 
 /*HOME PAGE*/
 .main {
-    text-align: center;
-    display: inline-block;
+    display: block;
     padding: 20px;
+    margin: auto;
 }
 .mainvid {
     text-align: center;
@@ -63,13 +63,15 @@ h1 {
     clear: both;
     margin: auto;
     display: block;
-    padding: 20px;
+    padding: 5px 20px;
 }
 .mainvid h {
+    text-align: center;
     font-weight: bold;
     font-weight: italic;
     font-size: 30px;
-    padding: 15px 40%;
+    display: block;
+    padding: 15px 0;
     background-color: rgb(23, 94, 153);
     color: rgb(245, 233, 69);
 }
@@ -77,18 +79,19 @@ h1 {
     width: 90%;
     clear: both;
     margin: auto;
-    margin-top: 20px;
+    margin-top: 5px;
 }
 .twit-col {
     width: 45%;
     margin-right: 30px;
     border-style: solid;
     border-width: 5px;
-    float:left;
+    float: left;
 }
 @media screen and (max-width: 900px) {
     .twit-col {
         width: 97%;
+        float: none;
     }
 }
 
