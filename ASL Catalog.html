@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+  <header>
+    <link a href="ACT_ASL.css" rel="stylesheet" type="text/css"/>
+    <title>ACT ASL</title>
+  </header>
+  <body>
+    <div class="top">
+      <h1>ACT ASL</h1>
+      <div class="navbar">
+        <a href="ACT_ASL.html">Home</a>
+        <a class="active" href="ASL Catalog.html">Catalogue</a>
+        <a href="ASL Info.html">Info</a>
+      </div>
+      <div class="blank">
+      </div>
+      <h></h>
+    </div>
+<!--------------------------CATALOGUE----------------------------------->
+    <div class = "cat">
+<!------------------------ROW 1-------------------------->
+      <div class="row">
+        <div class="column">
+          <button class="collapse">Monsieur leButton</button>
+          <div class="content">
+            <p>HELP ME</p>
+          </div>
+        </div>
+        <div class="column">
+          <button class="collapse">Monsieur leButton</button>
+          <div class="content">
+            <p>HELP ME</p>
+          </div>
+        </div>
+        <div class="column">
+          <button class="collapse">Monsieur leButton</button>
+          <div class="content">
+            <p>HELP ME</p>
+          </div>
+        </div>
+      </div>
+<!------------------------ROW 2-------------------------->
+      <div class="row">
+        <div class="column">
+          <button class="collapse">Monsieur leButton</button>
+          <div class="content">
+            <p>HELP ME</p>
+          </div>
+        </div>
+        <div class="column">
+          <button class="collapse">Monsieur leButton</button>
+          <div class="content">
+            <p>HELP ME</p>
+          </div>
+        </div>
+        <div class="column">
+          <button class="collapse">Monsieur leButton</button>
+          <div class="content">
+            <p>HELP ME</p>
+          </div>
+        </div>
+      </div>
+<!------------------------ROW 3-------------------------->
+      <div class="row">
+        <div class="column">
+          <button class="collapse">Monsieur leButton</button>
+          <div class="content">
+            <p>HELP ME</p>
+          </div>
+        </div>
+        <div class="column">
+          <button class="collapse">Monsieur leButton</button>
+          <div class="content">
+            <p>HELP ME</p>
+          </div>
+        </div>
+        <div class="column">
+          <button class="collapse">Monsieur leButton</button>
+          <div class="content">
+            <p>HELP ME</p>
+          </div>
+        </div>
+      </div>
+<!----------------------------SCRIPT------------------------------------>
+      <script>
+          var coll = document.getElementsByClassName("collapse");
+          var i;
+          for (i = 0; i < coll.length; i++) {
+            coll[i].addEventListener("click", function() {
+              this.classList.toggle("active");
+              var content = this.nextElementSibling;
+              if (content.style.display === "block") {
+                content.style.display = "none";
+              } else {
+                content.style.display = "block";
+                coll[i].style.backgroundColor = "red";
+              }
+            });
+          }
+        </script>
+    </div>
+
+  </body>
+</html>
