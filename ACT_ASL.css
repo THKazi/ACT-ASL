@@ -6,6 +6,10 @@
     font-size: 100%;
     vertical-align: baseline;
     background: transparent;
+    font-family: "Verdana",sans-serif;
+}
+html {
+    scroll-behavior: smooth;
 }
 .top{
     background-color: #2196F3;
@@ -23,21 +27,17 @@ h1{
 .navbar {
     overflow: hidden;
     background-color: #f8f8f8;
-    font-family: "Verdana",sans-serif;
-    padding-left: 540px;
-}
-.blank {
-    background-color: rgb(100, 171, 230);
-    padding: 3px 3px;
+    text-align: center;
+    position: sticky;
 }
 .navbar a {
-    float: left;
-    display: block;
+    display: inline-block;
     color: black;
     text-align: center;
-    padding: 14px 16px;
+    padding: 14px 50px;
     text-decoration: none;
-    font-size: 17px;
+    font-size: 18px;
+    font-weight: bold;
 }
 .navbar a:hover {
     background-color: #ddd;
@@ -46,35 +46,77 @@ h1{
 .navbar a.active {
     background-color: rgb(100, 171, 230);
     color: white;
-    font-weight: bold;
+}
+.blank {
+    background-color: rgb(100, 171, 230);
+    padding: 3px 3px;
 }
 
-/*CATALOGUE*/
-.cat{
+/*HOME PAGE*/
+.main {
     text-align: center;
+    display: inline-block;
+    padding: 20px;
 }
+.mainvid {
+    text-align: center;
+    width: 90%;
+    background-color:rgb(224, 224, 224);
+    clear: both;
+    margin: auto;
+    display: block;   
+    padding: 20px; 
+}
+.mainvid h {
+    font-weight: bold;
+    font-weight: italic;
+    font-size: 30px;
+    padding: 15px 40%;
+    background-color: rgb(23, 94, 153);
+    color: rgb(245, 233, 69);
+}
+.mainvid video {
+    width: 90%;
+    clear: both;
+    margin: auto;
+    margin-top: 20px;
+}
+.twit-col {
+    width: 45%;
+    margin-right: 30px;
+    border-style: solid;
+    border-width: 5px;
+    float:left;
+}
+@media screen and (max-width: 900px) {
+    .twit-col {
+        width: 97%;
+    }}
+
+/*CATALOGUE*/
 .row{
     width: 100%;
-    padding: 3px;
+    padding-right: 10px;
+    padding-left: 10px;
     padding-top: 0px;
     padding-bottom: 0px;
     display: inline-block;
+    text-align:center;
 }
 .column {
     float: left;
-    width: 32.6%;
-    padding: 4px;
+    width: 32%;
+    padding: 7px 5px 0px 5px;
 }
 /* Responsive layout - makes the three columns stack on top of each other instead of next to each other on smaller screens (600px wide or less) */
-@media screen and (max-width: 600px) {
-.column {
-    width: 98%;
+@media screen and (max-width: 900px) {
+.collapse {
+    width: 97%;
     text-align: center;
-}
-}
+}}
 .collapse {
     background-color: #eee;
-    color: #444;
+    color: rgb(32, 32, 32);
     cursor: pointer;
     padding: 18px;
     height: 30%;
@@ -83,19 +125,28 @@ h1{
     text-align: center;
     outline: none;
     font-size: 15px;
-  }
-.collapse:focus {
-    background-color: rgb(100, 171, 230);
+    font-weight: bold;
 }
-/*.column button {
-    padding-bottom: 25px;
-    background-color: #2196F3;
-}*/
+.collapse.active {
+    background-color: rgb(100, 171, 230);
+    height: 70px;
+}
 .content {
-    padding: 0 18px;
+    padding: 10px 10px;
+    width: 95.5%;
     display: none;
-    overflow: hidden;
+    overflow: visible;
     background-color: #f1f1f1;
+    text-align: left;
+}
+video {
+    width: 100%;
+    height: 100%;
+}
+/*Info*/
+.image {
+    display: inline-block;
+    text-align: center;
 }
 
 /*Search*/
