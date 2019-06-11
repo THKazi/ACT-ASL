@@ -97,19 +97,19 @@ h1 {
 
 /*CATALOGUE*/
 .cat {
-    margin-top: 10px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
 }
 
-.column {
+.box {
+    margin: 5px;
     width: 32%;
 }
-/* Responsive layout - makes the three columns stack on top of each other instead of next to each other on smaller screens (600px wide or less) */
+/* Responsive layout - lays boxes on top of one another for smaller screens */
 @media screen and (max-width: 900px) {
-    .column {
+    .box {
         width: 97%;
     }
 }
