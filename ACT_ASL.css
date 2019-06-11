@@ -15,8 +15,10 @@ html {
     background-color: #2196F3;
     /*padding: 15px 15px;*/
     position: sticky;
+    /* We want a little blue strip below the navbar */
+    padding-bottom: 6px;
 }
-h1{
+h1 {
     background-color: #2196F3;
     float: center;
     text-align: center;
@@ -46,10 +48,6 @@ h1{
 .navbar a.active {
     background-color: rgb(100, 171, 230);
     color: white;
-}
-.blank {
-    background-color: rgb(100, 171, 230);
-    padding: 3px 3px;
 }
 
 /*HOME PAGE*/
