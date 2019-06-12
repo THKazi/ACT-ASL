@@ -109,7 +109,7 @@ body {
     width: 32%;
 }
 /* Responsive layout - changes column count for different aspect ratios */
-@media screen and (max-aspect-ratio: 4/4) {
+@media screen and (max-aspect-ratio: 1/1) {
     .box {
         width: 48%;
     }
@@ -144,6 +144,9 @@ body {
 }
 .box.active .content {
     display: initial;
+}
+.box.active {
+    background-color: #eee;
 }
 .content video {
     width: 100%;
