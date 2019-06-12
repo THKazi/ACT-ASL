@@ -124,18 +124,18 @@ body {
     font-size: 15px;
     font-weight: bold;
 }
-.collapse.active {
+.box.active .collapse {
     background-color: rgb(100, 171, 230);
     height: 70px;
 }
 .content {
     width: 100%;
     display: none;
-    overflow: visible;
-    background-color: #f1f1f1;
     text-align: left;
 }
-
+.box.active .content {
+    display: initial;
+}
 .content video {
     width: 100%;
 }

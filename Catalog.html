@@ -1,133 +1,163 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <link a href="ACT_ASL.css" rel="stylesheet" type="text/css"/>
-    <title>ACT ASL</title>
-  </head>
-  <body>
-    <div class="top">
-      <h1>ACT ASL</h1>
-      <div class="navbar">
-        <a href="index.html">Home</a>
-        <a class="active" href="Catalog.html">Catalogue</a>
-        <a href="Info.html">Info</a>
-      </div>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <link href="ACT_ASL.css" rel="stylesheet" type="text/css"/>
+  <title>ACT ASL</title>
+</head>
+<body>
+  <div class="top">
+    <h1>ACT ASL</h1>
+    <div class="navbar">
+      <a href="index.html">Home</a>
+      <a class="active" href="Catalog.html">Catalogue</a>
+      <a href="Info.html">Info</a>
     </div>
+  </div>
 
-    <div class="cat">
-      <div class="box"> <!--START OF BOX-->
-        <button class="collapse" href="#cont">Family</button>
-        <div class="content" id="cont">
-          <video autoplay muted loop>
-            <source src="family.mp4" type="video/mp4">
-          </video>
+  <div class="cat">
+    <div class="box"> <!--START OF BOX-->
+      <button class="collapse">Family</button>
+      <div class="content">
+        <video autoplay muted loop>
+          <source src="family.mp4" type="video/mp4">
+        </video>
+        <ul>
           <li>Grandfather (father)</li>
           <li>Grandmother (mother)</li>
           <li>Aunt</li>
           <li>Uncle</li>
           <li>Brother</li>
           <li>Sister</li>
-        </div>
-      </div>  <!--END OF BOX-->
-      <div class="box"> <!--START OF BOX-->
-        <button class="collapse" href="#cont">Numbers</button>
-        <div class="content" id="cont">
-          <video autoplay muted loop>
-            <source src="num.mp4" type="video/mp4">
-          </video>
-          <ul>
-            <li>1</li>
-            <li>2</li>
-            <li>3</li>
-            <li>4</li>
-            <li>5</li>
-            <li>6</li>
-            <li>7</li>
-            <li>8</li>
-            <li>9</li>
-            <li>10</li>
-          </ul>
-        </div>
+        </ul>
       </div>
-      <div class="box">
-        <button class="collapse" href="#cont">Hello</button>
-        <div class="content" id="cont">
-          <video autoplay muted loop>
-            <source src="hello.mp4" type="video/mp4">
-          </video>
-        </div>
+    </div>  <!--END OF BOX-->
+    <div class="box"> <!--START OF BOX-->
+      <button class="collapse">Numbers</button>
+      <div class="content">
+        <video autoplay muted loop>
+          <source src="num.mp4" type="video/mp4">
+        </video>
+        <ul>
+          <li>1</li>
+          <li>2</li>
+          <li>3</li>
+          <li>4</li>
+          <li>5</li>
+          <li>6</li>
+          <li>7</li>
+          <li>8</li>
+          <li>9</li>
+          <li>10</li>
+        </ul>
       </div>
-      <div class="box">
-        <button class="collapse" href="#cont">"How are you?"</button>
-        <div class="content" id="cont">
-          <video autoplay muted loop>
-            <source src="howareyou.mp4" type="video/mp4">
-          </video>
-        </div>
-      </div>
-      <div class="box">
-        <button class="collapse" href="#cont">"I'm good :)"</button>
-        <div class="content" id="cont">
-          <video autoplay muted loop>
-            <source src="good.mp4" type="video/mp4">
-          </video>
-        </div>
-      </div>
-      <div class="box">
-        <button class="collapse" href="#cont">"I'm bad :("</button>
-        <div class="content" id="cont">
-          <video autoplay muted loop>
-            <source src="bad.mp4" type="video/mp4">
-          </video>
-        </div>
-      </div>
-      <div class="box">
-        <button class="collapse" href="#cont">"Where is the Washroom?"</button>
-        <div class="content" id="cont">
-          <video autoplay muted loop>
-            <source src="washroom.mp4" type="video/mp4">
-          </video>
-        </div>
-      </div>
-      <div class="box">
-        <button class="collapse" href="#cont">"Happy Birthday!"</button>
-        <div class="content" id="cont">
-          <video autoplay muted loop>
-            <source src="hbd.mp4" type="video/mp4">
-          </video>
-        </div>
-      </div>
-      <div class="box">
-        <button class="collapse" href="#cont">"Sign Language"</button>
-        <div class="content" id="cont">
-          <video autoplay muted loop>
-            <source src="asl.mp4" type="video/mp4">
-          </video>
-        </div>
-      </div>
-
-      <script>
-          var coll = document.getElementsByClassName("collapse");
-          var i;
-          for (i = 0; i < coll.length; i++) {
-            coll[i].addEventListener("click", function() {
-              this.classList.toggle("active");
-              var content = this.nextElementSibling;
-              if (content.style.display === "block") {
-                content.style.display = "none";
-              } else {
-                content.style.display = "block";
-              }
-
-              for (i=0; i<coll.length; i++) {
-                if (coll[i] !== this){
-                coll[i].classList.remove("active");
-                coll[i].nextElementSibling.style.display = "none";
-              }
-              }
-            });
-          }
-        </script>
     </div>
-  </body>
+    <div class="box">
+      <button class="collapse">Hello</button>
+      <div class="content">
+        <video autoplay muted loop>
+          <source src="hello.mp4" type="video/mp4">
+        </video>
+      </div>
+    </div>
+    <div class="box">
+      <button class="collapse">"How are you?"</button>
+      <div class="content">
+        <video autoplay muted loop>
+          <source src="howareyou.mp4" type="video/mp4">
+        </video>
+      </div>
+    </div>
+    <div class="box">
+      <button class="collapse">"I'm good :)"</button>
+      <div class="content">
+        <video autoplay muted loop>
+          <source src="good.mp4" type="video/mp4">
+        </video>
+      </div>
+    </div>
+    <div class="box">
+      <button class="collapse">"I'm bad :("</button>
+      <div class="content">
+        <video autoplay muted loop>
+          <source src="bad.mp4" type="video/mp4">
+        </video>
+      </div>
+    </div>
+    <div class="box">
+      <button class="collapse">"Where is the Washroom?"</button>
+      <div class="content">
+        <video autoplay muted loop>
+          <source src="washroom.mp4" type="video/mp4">
+        </video>
+      </div>
+    </div>
+    <div class="box">
+      <button class="collapse">"Happy Birthday!"</button>
+      <div class="content">
+        <video autoplay muted loop>
+          <source src="hbd.mp4" type="video/mp4">
+        </video>
+      </div>
+    </div>
+    <div class="box">
+      <button class="collapse">"Sign Language"</button>
+      <div class="content">
+        <video autoplay muted loop>
+          <source src="asl.mp4" type="video/mp4">
+        </video>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    var cat = document.getElementsByClassName('cat')[0];
+    var boxes = Array.from(cat.getElementsByClassName('box'));
+    var collapsers = []
+    var videos = []
+
+    // We'll collect our collapsers and videos into their respective arrays
+    for (var i = 0; i < boxes.length; i++) {
+      var box = boxes[i];
+      collapsers.push(box.getElementsByClassName('collapse')[0]);
+      videos.push(box.getElementsByTagName('video')[0]);
+    }
+
+    // We need to keep track of which collapser is currently active
+    // (since clicking on an active collapser should collapse it)
+    // Oh boy, that is starting to be a mouthful
+    var activeIndex = -1;
+    // We will use assign a single event listener to the body instead of
+    // individual listeners, then check if we clicked a collapser
+    document.body.addEventListener('click', function (e) {
+      var index = collapsers.indexOf(e.target);
+      console.log('clicked!', boxes);
+      // If you're are NOT a collapser, we're going to stop right now
+      if (index === -1) return;
+      // #Discrimination
+
+      // Now we can deactivate whatever's currently active
+      if (activeIndex !== -1) {
+        boxes[activeIndex].classList.remove('active')
+      }
+
+      // If we click on the active collapser, nothing else will happen
+      if (index === activeIndex) {
+        activeIndex = -1;
+      // If we click on any other collapser, that becomes active
+      } else {
+        activeIndex = index;
+        boxes[index].classList.add('active');
+        // We want it to play from the beginning, of course
+        videos[index].currentTime = '0';
+        // And as a nice touch, scroll to it too!
+        var y = boxes[index].getBoundingClientRect().top + window.scrollY;
+        window.scroll({
+          top: y,
+          behavior: 'smooth'
+        });
+      }
+    });
+  </script>
+</body>
 </html>
