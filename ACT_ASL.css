@@ -1,28 +1,27 @@
-* { /* * = universal selector*/
-    margin: 0;
-    padding: 0;
-    border: 0;
-    outline: 0;
-    font-size: 100%;
-    vertical-align: baseline;
-    background: transparent;
-    font-family: "Verdana",sans-serif;
-}
 html {
     scroll-behavior: smooth;
 }
-.top{
+body {
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+    font-family: "Verdana", sans-serif;
+}
+.top {
     background-color: #2196F3;
     /*padding: 15px 15px;*/
     position: sticky;
+    /* We want a little blue strip below the navbar */
+    padding-bottom: 6px;
 }
-h1{
+.top h1 {
+    margin: 0;
     background-color: #2196F3;
     float: center;
     text-align: center;
     color: rgb(255, 233, 106);
     font-size: 80px;
-    padding: 10px 15px;
+    padding: 10px 0;
 }
 .navbar {
     overflow: hidden;
@@ -47,31 +46,29 @@ h1{
     background-color: rgb(100, 171, 230);
     color: white;
 }
-.blank {
-    background-color: rgb(100, 171, 230);
-    padding: 3px 3px;
-}
 
 /*HOME PAGE*/
 .main {
-    text-align: center;
-    display: inline-block;
+    display: block;
     padding: 20px;
+    margin: auto;
+    width: 90%;
 }
 .mainvid {
     text-align: center;
-    width: 90%;
-    background-color:rgb(224, 224, 224);
+    background-color: rgb(224, 224, 224);
     clear: both;
     margin: auto;
-    display: block;   
-    padding: 20px; 
+    display: block;
+    padding: 5px 20px;
 }
 .mainvid h {
+    text-align: center;
     font-weight: bold;
     font-weight: italic;
     font-size: 30px;
-    padding: 15px 40%;
+    display: block;
+    padding: 15px 0;
     background-color: rgb(23, 94, 153);
     color: rgb(245, 233, 69);
 }
@@ -79,47 +76,56 @@ h1{
     width: 90%;
     clear: both;
     margin: auto;
-    margin-top: 20px;
+    margin-top: 5px;
+}
+.twitter-feeds {
+    text-align: center;
 }
 .twit-col {
+    margin: 0 2px;
     width: 45%;
-    margin-right: 30px;
-    border-style: solid;
-    border-width: 5px;
-    float:left;
+    border: 5px solid black;
+    display: inline-block;
+    vertical-align: top;
 }
-@media screen and (max-width: 900px) {
+/* Basically, displays as a single column on vertical displays */
+@media screen and (max-aspect-ratio: 7/10) {
     .twit-col {
-        width: 97%;
-    }}
+      margin: 0;
+      width: 80%;
+    }
+}
 
 /*CATALOGUE*/
-.row{
-    width: 100%;
-    padding-right: 10px;
-    padding-left: 10px;
-    padding-top: 0px;
-    padding-bottom: 0px;
-    display: inline-block;
-    text-align:center;
+.cat {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
 }
-.column {
-    float: left;
+
+.box {
+    margin: 5px;
     width: 32%;
-    padding: 7px 5px 0px 5px;
 }
-/* Responsive layout - makes the three columns stack on top of each other instead of next to each other on smaller screens (600px wide or less) */
-@media screen and (max-width: 900px) {
-.collapse {
-    width: 97%;
-    text-align: center;
-}}
+/* Responsive layout - changes column count for different aspect ratios */
+@media screen and (max-aspect-ratio: 1/1) {
+    .box {
+        width: 48%;
+    }
+}
+@media screen and (max-aspect-ratio: 7/10) {
+    .box {
+        /* When laid out in one column, side-margins are unnecessary */
+        margin: 5px 0;
+        width: 97%;
+    }
+}
 .collapse {
     background-color: #eee;
     color: rgb(32, 32, 32);
     cursor: pointer;
-    padding: 18px;
-    height: 30%;
+    padding: 18px 0;
     width: 100%;
     border: none;
     text-align: center;
@@ -127,21 +133,26 @@ h1{
     font-size: 15px;
     font-weight: bold;
 }
-.collapse.active {
+.box.active .collapse {
     background-color: rgb(100, 171, 230);
     height: 70px;
 }
+.collapse:hover {
+    background-color: #ddd;
+}
 .content {
-    padding: 10px 10px;
-    width: 95.5%;
+    width: 100%;
     display: none;
-    overflow: visible;
-    background-color: #f1f1f1;
     text-align: left;
 }
-video {
+.box.active .content {
+    display: initial;
+}
+.box.active {
+    background-color: #eee;
+}
+.content video {
     width: 100%;
-    height: 100%;
 }
 /*Info*/
 .image {
