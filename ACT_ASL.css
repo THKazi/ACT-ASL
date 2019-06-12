@@ -137,6 +137,9 @@ body {
     background-color: rgb(100, 171, 230);
     height: 70px;
 }
+.collapse:hover {
+    background-color: #ddd;
+}
 .content {
     width: 100%;
     display: none;
