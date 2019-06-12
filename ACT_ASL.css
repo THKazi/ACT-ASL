@@ -52,10 +52,10 @@ body {
     display: block;
     padding: 20px;
     margin: auto;
+    width: 90%;
 }
 .mainvid {
     text-align: center;
-    width: 90%;
     background-color: rgb(224, 224, 224);
     clear: both;
     margin: auto;
@@ -78,17 +78,21 @@ body {
     margin: auto;
     margin-top: 5px;
 }
-.twit-col {
-    width: 45%;
-    margin-right: 30px;
-    border-style: solid;
-    border-width: 5px;
-    float: left;
+.twitter-feeds {
+    text-align: center;
 }
-@media screen and (max-width: 900px) {
+.twit-col {
+    margin: 0 2px;
+    width: 45%;
+    border: 5px solid black;
+    display: inline-block;
+    vertical-align: top;
+}
+/* Basically, displays as a single column on *really* vertical displays */
+@media screen and (max-aspect-ratio: 3/5) {
     .twit-col {
-        width: 97%;
-        float: none;
+      margin: 0;
+      width: 80%;
     }
 }
 
@@ -104,8 +108,13 @@ body {
     margin: 5px;
     width: 32%;
 }
-/* Responsive layout - lays boxes on top of one another for smaller screens */
-@media screen and (max-width: 900px) {
+/* Responsive layout - changes column count for different aspect ratios */
+@media screen and (max-aspect-ratio: 4/4) {
+    .box {
+        width: 48%;
+    }
+}
+@media screen and (max-aspect-ratio: 3/5) {
     .box {
         /* When laid out in one column, side-margins are unnecessary */
         margin: 5px 0;
